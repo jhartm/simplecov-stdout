@@ -1,0 +1,200 @@
+# OUR TWEAKS to the defaults, which are stored in the gem.
+# Note that arrays and hashes get OVERWRITTEN, so frex if default says:
+#
+# Precinct/Cop:
+#   Enabled: true
+#   Options:
+#   - 17
+#   - 23
+#
+# and we want to add option 42, we can't just say:
+#
+# Precinct/Cop:
+#   Enabled: true
+#   Options:
+#   - 42
+#
+# instead we have to supply the full list, like so:
+#
+# Precinct/Cop:
+#   Enabled: true
+#   Options:
+#   - 17
+#   - 23
+#   - 42
+#
+# Otherwise Rubocop doesn't know we want to *keep* 17 and 23.
+
+AllCops:
+  # yes I do mean to *remove* the various other options here;
+  # we can revisit those if need be
+  Include:
+    # included by default, and we need:
+    - '**/*.rb'
+    - '**/*.gemspec'
+    - '**/Gemfile'
+    # what we need to add:
+    - 'lib/**/*.rb'
+  Exclude:
+    # excluded by default:
+    - 'vendor/**/*'
+    # .git is excluded by default but we use git
+    - '.hg/**/*'
+    # I don't think we *use* admin_brick_web any more
+    - 'lib/admin_brick_web.rb'
+    # I don't think we *use* indented_includer any more
+    - 'lib/indented_includer.rb'
+    # sometimes we have to do things a little differently in a view...
+    # but it should be short enough to be okay.
+    - 'lib/views/**.*'
+    - 'test/**/*'
+    - 'tmp/**/*'
+  CacheRootDirectory: /tmp
+  # TargetRubyVersion: gets figured out from Gemfile
+
+Style/BlockDelimiters:
+  EnforcedStyle: braces_for_chaining
+  FunctionalMethods:
+    # by default:
+    - let
+    - let!
+    - subject
+    - watch
+    # we add:
+    - critic_fail
+    - debug
+    - info_succeed
+    - warn_fail
+
+Style/ConditionalAssignment:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: false
+
+Style/SpecialGlobalVars:
+  Enabled: false
+
+Layout/AlignHash:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+  # because then it can be pasted into irb and the interpreter
+  # won't ass-u-me that we're done with the statement
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+Layout/EmptyLineBetweenDefs:
+  NumberOfEmptyLines: [1, 3]  # min 1, max 3
+
+Layout/EmptyLines:
+  Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+Layout/ExtraSpacing:
+  # NOTE: Dave has a PR open to add an AllowForTrailingComments option
+  AllowForAlignment: true
+  ForceEqualSignAlignment: false
+
+Layout/TrailingBlankLines:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 25  # TODO: revisit this -- maybe rachet it down to default 15
+
+Metrics/MethodLength:
+  # should work down to default of 10 eventually
+  Max: 20
+
+Metrics/ModuleLength:
+  # should work down to default of 100 eventually
+  Max: 200
+
+Naming/UncommunicativeMethodParamName:
+  AllowedNames:
+    # by default:
+    - io
+    - id
+    - to
+    - by
+    - 'on'
+    - in
+    - at
+    - ip
+    - db
+    # we want to add, to show that it's unused and meaningless:
+    - _
+    - k
+    - v
+    - e
+    - i
+
+Style/CommentedKeyword:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/Encoding:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Style/MutableConstant:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  Enabled: false
+  
+Style/PreferredHashMethods:
+  Enabled: false
+
+Style/RedundantReturn:
+  # When true allows code like `return x, y`.
+  # We should probably change this back to the default (false),
+  # i.e., delete this tweak,
+  # because it's rather confusing, and the same effect can be had
+  # by using `return [x, y]`.
+  AllowMultipleReturnValues: true
+
+Style/RedundantSelf:
+  # Normally a good thing, but we are using it exclusively
+  # where it is helpful to clarify for metaprogramming, like
+  # self.send, self.respond_to?, and self.instance_variable_set.
+  Enabled: false
+
+Style/SignalException:
+  EnforcedStyle: semantic
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Style/TrivialAccessors:
+  AllowPredicates: false  # TODO: think about this
+
+Style/ZeroLengthPredicate:
+  Enabled: false
+
+Style/BlockComments:
+  Enabled: false
