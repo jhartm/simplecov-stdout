@@ -39,11 +39,11 @@ Or install it yourself as:
 
 Add the following to your `test_helper.rb`:
 
-'''ruby
+```ruby
 require 'simplecov-stdout'
-'''
+```
 
-Add the following to your `test_helper.rb` or `.simplecov`:
+Add the following to top of your `test_helper.rb` file or in a `.simplecov` configuration file:
 
 ```ruby
 SimpleCov.start do
