@@ -4,7 +4,7 @@ Generates a textual version of the coverage information displayed is the HTML Fo
 
 __Example:__
 
-'''console
+'''shell
 ================================================================================
 All files (81.82% covered at 1.0 hits/line)
 
