@@ -14,9 +14,9 @@ lib/crashtest/car.rb    81.82       21      11               9               2  
 ================================================================================
 ```
 
-*__NOTE: See SimpleCov repo at http://github.com/colszowka/simplecov__*
+*__See SimpleCov repo at http://github.com/colszowka/simplecov__*
 
-*__NOTE: See SimpleCov HTML formatter repo at http://github.com/colszowka/simplecov-html__*
+*__See SimpleCov HTML formatter repo at http://github.com/colszowka/simplecov-html__*
 
 ## Installation
 
