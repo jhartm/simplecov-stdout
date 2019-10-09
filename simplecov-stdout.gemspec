@@ -1,11 +1,10 @@
-
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "simplecov/stdout/version"
+require "simplecov-stdout/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "simplecov-stdout"
-  spec.version       = Simplecov::Stdout::VERSION
+  spec.version       = Simplecov::Formatter::VERSION
   spec.authors       = ["John Hartmann"]
   spec.email         = ["jhartmann@georgeconsulting.com"]
 
