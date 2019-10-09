@@ -1,8 +1,21 @@
 # simplecov-stdout
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/simplecov/stdout`. To experiment with that code, run `bin/console` for an interactive prompt.
+Generates a textual version of the coverage information displayed is the HTML Formatter.
 
-TODO: Delete this and the text above, and describe your gem
+__Example__
+'''
+================================================================================
+All files (81.82% covered at 1.0 hits/line)
+
+1 files in total. 11 relevant lines. 9 lines covered and 2 lines missed
+
+File                    % covered   Lines   Relevant lines   Lines covered   Lines missed   Avg. Hits/Line
+lib/crashtest/car.rb    81.82       21      11               9               2              1.0
+================================================================================
+'''
+
+*__NOTE: See SimpleCov repo at http://github.com/colszowka/simplecov__*
+*__NOTE: See SimpleCov HTML formatter repo at http://github.com/colszowka/simplecov-html__*
 
 ## Installation
 
@@ -22,6 +35,12 @@ Or install it yourself as:
 
 ## Usage
 
+Add the following to your `test_helper.rb`:
+
+'''ruby
+require 'simplecov-stdout'
+'''
+
 Add the following to your `test_helper.rb` or `.simplecov`:
 
 ```ruby
@@ -35,7 +54,7 @@ end
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Run `rake test` to run the tests.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
