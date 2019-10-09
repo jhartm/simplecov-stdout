@@ -2,8 +2,8 @@
 
 Generates a textual version of the coverage information displayed is the HTML Formatter.
 
-__Example__
-'''
+__Example:__
+```text
 ================================================================================
 All files (81.82% covered at 1.0 hits/line)
 
@@ -12,10 +12,11 @@ All files (81.82% covered at 1.0 hits/line)
 File                    % covered   Lines   Relevant lines   Lines covered   Lines missed   Avg. Hits/Line
 lib/crashtest/car.rb    81.82       21      11               9               2              1.0
 ================================================================================
-'''
+```
 
-*__NOTE: See SimpleCov repo at http://github.com/colszowka/simplecov__*
-*__NOTE: See SimpleCov HTML formatter repo at http://github.com/colszowka/simplecov-html__*
+*__See SimpleCov repo at http://github.com/colszowka/simplecov__*
+
+*__See SimpleCov HTML formatter repo at http://github.com/colszowka/simplecov-html__*
 
 ## Installation
 
@@ -37,11 +38,11 @@ Or install it yourself as:
 
 Add the following to your `test_helper.rb`:
 
-'''ruby
+```ruby
 require 'simplecov-stdout'
-'''
+```
 
-Add the following to your `test_helper.rb` or `.simplecov`:
+Add the following to top of your `test_helper.rb` file or in a `.simplecov` configuration file:
 
 ```ruby
 SimpleCov.start do
