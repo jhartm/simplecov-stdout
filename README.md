@@ -2,8 +2,9 @@
 
 Generates a textual version of the coverage information displayed is the HTML Formatter.
 
-__Example__
-'''
+__Example:__
+
+'''console
 ================================================================================
 All files (81.82% covered at 1.0 hits/line)
 
@@ -15,6 +16,7 @@ lib/crashtest/car.rb    81.82       21      11               9               2  
 '''
 
 *__NOTE: See SimpleCov repo at http://github.com/colszowka/simplecov__*
+
 *__NOTE: See SimpleCov HTML formatter repo at http://github.com/colszowka/simplecov-html__*
 
 ## Installation
