@@ -1,5 +1,7 @@
 module Simplecov
   module Formatter
-    VERSION = "0.1.0"
+    class STDOUTFormatter
+      VERSION = "0.1.0"
+    end
   end
 end

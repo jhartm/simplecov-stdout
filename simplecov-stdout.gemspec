@@ -4,7 +4,7 @@ require "simplecov-stdout/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "simplecov-stdout"
-  spec.version       = Simplecov::Formatter::VERSION
+  spec.version       = Simplecov::Formatter::STDOUTFormatter::VERSION
   spec.authors       = ["John Hartmann"]
   spec.email         = ["jhartmann@georgeconsulting.com"]
 
