@@ -3,7 +3,6 @@
 Generates a textual version of the coverage information displayed is the HTML Formatter.
 
 __Example:__
-
 ```text
 ================================================================================
 All files (81.82% covered at 1.0 hits/line)
