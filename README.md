@@ -4,7 +4,7 @@ Generates a textual version of the coverage information displayed is the HTML Fo
 
 __Example:__
 
-'''shell
+```shell
 ================================================================================
 All files (81.82% covered at 1.0 hits/line)
 
@@ -13,7 +13,7 @@ All files (81.82% covered at 1.0 hits/line)
 File                    % covered   Lines   Relevant lines   Lines covered   Lines missed   Avg. Hits/Line
 lib/crashtest/car.rb    81.82       21      11               9               2              1.0
 ================================================================================
-'''
+```
 
 *__NOTE: See SimpleCov repo at http://github.com/colszowka/simplecov__*
 
